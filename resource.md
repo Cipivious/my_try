@@ -9,7 +9,8 @@
 - [x] [修改emacs配置文件](#emacs修改配置文件)
 - [ ] [学习正则表达式](#正则表达式)
 - [x] [emacs写xhtml的插件的安装与使用](#emacs迈向xhtml)
-- [ ] 
+
+
 
 # Resource
 
