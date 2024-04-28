@@ -3,7 +3,7 @@
 # Tasks
 
 - [ ] ...
-- [ ] [学习python-markdown](#python-markdown)
+- [x] [学习python-markdown](#python-markdown)
 - [x] [学习nodejs](#运行环境)
 - [x] 域名备案完成
 - [ ] 银行卡认证
@@ -434,6 +434,12 @@ emacs修改文件过程
 
 通过结合以上多种缓存策略，可以实现在用户第一次加载页面时形成缓存，并在下次访问时快速加载页面内容。需要根据页面特点和需求选择合适的缓存策略，并进行相应的实现和配置。
 
+## 页面宽度调整
+
+[HTML适应手机浏览器宽度](https://blog.csdn.net/wusuopuBUPT/article/details/21941343)
+
+
+
 <a name="javascript"> </a>
 
 # javascript
@@ -594,6 +600,16 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 <a name="broswer"> </a>
 
 # broswer
+
+## 插件
+
+### [user-agent](https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=zh-CN&utm_source=ext_sidebar)
+
+### [Immersive Translate](https://immersivetranslate.com/en/)
+
+### vimium-模拟vim控制浏览器
+
+### [**TimeYourWeb**](https://chromewebstore.google.com/detail/timeyourweb-time-tracker/kfmlkgchpffnaphmlmjnimonlldbcpnh?hl=zh-CN&utm_source=ext_sidebar)
 
 ## 油猴脚本
 

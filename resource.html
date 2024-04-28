@@ -628,9 +628,13 @@ margin: 0 auto;
 
 
 #scroll-to-top {
-position: fixed; top: 20%; right: 45%; background-color: whitesmoke; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+position: fixed; top: 80%; right: 45%; background-color: whitesmoke; padding: 10px 20px; font-size: 16px; cursor: pointer; }
 body {
 overflow-x: hidden;
+}
+body {
+word-wrap: break-word;
+overflow-wrap: break-word;
 }
 </style>
 </head>
@@ -688,6 +692,7 @@ overflow-x: hidden;
 <li><a href="#tools"><span>tools</span></a></li>
 <li><a href="#学习笔记-1">学习笔记</a></li>
 <li><a href="#加载html速度">加载html速度</a></li>
+<li><a href="#页面宽度调整">页面宽度调整</a></li>
 </ul></li>
 <li><a href="#javascript">javascript</a>
 <ul>
@@ -701,6 +706,7 @@ overflow-x: hidden;
 </ul></li>
 <li><a href="#broswer">broswer</a>
 <ul>
+<li><a href="#插件-1">插件</a></li>
 <li><a href="#油猴脚本">油猴脚本</a></li>
 </ul></li>
 <li><a href="#linux">linux</a>
@@ -778,7 +784,7 @@ overflow-x: hidden;
 <ul class="task-list">
 <li><input type="checkbox" disabled></input>
 …</li>
-<li><input type="checkbox" disabled></input>
+<li><input type="checkbox" disabled checked></input>
 <a href="#python-markdown">学习python-markdown</a></li>
 <li><input type="checkbox" disabled checked></input>
 <a href="#运行环境">学习nodejs</a></li>
@@ -1096,6 +1102,8 @@ overflow-x: hidden;
 <li><strong>IndexedDB：</strong> 使用浏览器的 IndexedDB API 来创建客户端的数据库，可以存储大量数据并提供高性能的读写操作，适用于需要持久化存储的数据。</li>
 </ol>
 <p>通过结合以上多种缓存策略，可以实现在用户第一次加载页面时形成缓存，并在下次访问时快速加载页面内容。需要根据页面特点和需求选择合适的缓存策略，并进行相应的实现和配置。</p>
+<h2 id="页面宽度调整">页面宽度调整</h2>
+<p><a href="https://blog.csdn.net/wusuopuBUPT/article/details/21941343">HTML适应手机浏览器宽度</a></p>
 <p><a name="javascript"> </a></p>
 <h1 id="javascript">javascript</h1>
 <h2 id="运行环境">运行环境</h2>
@@ -1207,6 +1215,11 @@ overflow-x: hidden;
 <p>现在的主要方法，使用按键模拟的方法进行控制</p>
 <p><a name="broswer"> </a></p>
 <h1 id="broswer">broswer</h1>
+<h2 id="插件-1">插件</h2>
+<h3 id="user-agent"><a href="https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=zh-CN&amp;utm_source=ext_sidebar">user-agent</a></h3>
+<h3 id="immersive-translate"><a href="https://immersivetranslate.com/en/">Immersive Translate</a></h3>
+<h3 id="vimium-模拟vim控制浏览器">vimium-模拟vim控制浏览器</h3>
+<h3 id="timeyourweb"><a href="https://chromewebstore.google.com/detail/timeyourweb-time-tracker/kfmlkgchpffnaphmlmjnimonlldbcpnh?hl=zh-CN&amp;utm_source=ext_sidebar"><strong>TimeYourWeb</strong></a></h3>
 <h2 id="油猴脚本">油猴脚本</h2>
 <h3 id="无缝翻页"><a href="https://greasyfork.org/zh-CN/scripts/419215-%E8%87%AA%E5%8A%A8%E6%97%A0%E7%BC%9D%E7%BF%BB%E9%A1%B5">无缝翻页</a></h3>
 <h3 id="知乎增强"><a href="https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA">知乎增强</a></h3>
