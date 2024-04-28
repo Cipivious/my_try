@@ -533,6 +533,78 @@ Creating default alias: default -> node (-> v22.0.0)
 
 # linux 
 
+## systemctl
+
+### 开机
+
+在 Linux 系统中，您可以通过编辑启动脚本或者使用系统服务来实现在开机或关机时自动执行脚本的功能。
+
+1. **使用启动脚本**： 您可以编辑 `/etc/rc.local` 文件，将您希望在系统启动时执行的命令或脚本添加到文件中。编辑完成后，保存文件并重新启动系统，系统启动时将会自动执行该脚本。
+
+2. **使用 systemd 服务**： 在较新的 Linux 发行版中，通常使用 systemd 来管理系统服务。您可以创建一个 systemd 服务单元文件，并在其中指定要在系统启动时执行的脚本。以下是一个示例 systemd 服务单元文件的内容：
+
+   ```
+   plaintextCopy code[Unit]
+   Description=My Script
+   
+   [Service]
+   Type=oneshot
+   ExecStart=/path/to/your/script.sh
+   
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+   在这个示例中，`ExecStart` 指定了要执行的脚本的路径。编辑完成后，将该文件保存为 `.service` 后缀的文件（例如 `myscript.service`），然后将该文件移动到 `/etc/systemd/system/` 目录下。
+
+   然后，运行以下命令来启用该服务并在系统启动时执行脚本：
+
+   ```
+   sh
+   Copy code
+   sudo systemctl enable myscript.service
+   ```
+
+   重新启动系统后，该脚本将会在系统启动时自动执行。
+
+### 关机
+
+对于在 Linux 系统关闭时执行脚本的需求，您可以使用 systemd 的关机钩子（shutdown hook）来实现。关机钩子允许您在系统关闭时执行特定的命令或脚本。
+
+以下是如何使用 systemd 的关机钩子来执行脚本的步骤：
+
+1. 创建一个脚本文件，其中包含您希望在系统关闭时执行的命令。假设您的脚本文件是 `/path/to/your/shutdown_script.sh`。
+2. 创建一个 systemd 单元文件，用于定义关机钩子。命名为 `your-shutdown-hook.service`，内容如下：
+
+```
+plaintextCopy code[Unit]
+Description=Shutdown Hook
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+Requires=network.target
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/path/to/your/shutdown_script.sh
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
+```
+
+在这个示例中，`ExecStart` 指定了要在系统关闭时执行的脚本的路径。
+
+1. 将该文件保存到 `/etc/systemd/system/` 目录下。
+2. 使用以下命令启用服务：
+
+```
+sh
+Copy code
+sudo systemctl enable your-shutdown-hook.service
+```
+
+这样，当系统关闭时，您的脚本 `/path/to/your/shutdown_script.sh` 将会自动执行。
+
 ## 使用git
 
 一旦您的 Markdown 文件准备好了，您可以使用 Git 工具将文件上传到 GitHub。以下是一个基本的上传流程：
