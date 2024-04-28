@@ -696,6 +696,7 @@ cursor: pointer;
 <li><a href="#执行定时任务">执行定时任务</a></li>
 <li><a href="#systemctl">systemctl</a></li>
 <li><a href="#使用git">使用git</a></li>
+<li><a href="#ssh使用方法">ssh使用方法</a></li>
 <li><a href="#创建链接以及使用方法">创建链接以及使用方法</a></li>
 <li><a href="#查看硬件信息">查看硬件信息</a></li>
 <li><a href="#临时当做计算器"><span>临时当做计算器</span></a></li>
@@ -1248,6 +1249,44 @@ sudo systemctl enable your-shutdown-hook.service</code></pre>
 <p>可以使用git commit -m “Add new feature - $(date +”%Y-%m-%d“)”按日期更新</p>
 <h3 id="run.sh"><a href="file:///home/yang/typora/my_try/run.sh">run.sh</a></h3>
 <p>这是一个自动上传的脚本</p>
+<h3 id="删除仓库"><a href="https://worktile.com/kb/ask/261517.html">删除仓库</a></h3>
+<p>要删除远程分支的文件，需要按照以下步骤进行操作：</p>
+<ol type="1">
+<li><p>首先，使用以下命令查看当前的远程分支列表：</p>
+<p>git branch -r</p>
+<p>这将显示所有的远程分支列表，包括远程分支的名称和对应的远程仓库。</p></li>
+<li><p>然后，使用以下命令切换到对应的本地分支，用于进行文件删除操作：</p>
+<p>git checkout</p>
+<p>这将切换到本地分支 。</p></li>
+<li><p>接下来，使用以下命令查看当前分支的文件列表：</p>
+<p>git ls-files</p>
+<p>这将显示当前分支的所有文件列表。</p></li>
+<li><p>然后，使用以下命令删除指定的文件：</p>
+<p>git rm</p>
+<p>处填写要删除的文件路径。</p></li>
+<li><p>接着，使用以下命令提交删除的文件变更：</p>
+<p>git commit -m “Delete file:”</p>
+<p>在 `` 处填写要删除的文件路径。</p></li>
+<li><p>最后，使用以下命令推送删除的文件变更到远程分支：</p>
+<p>git push origin</p>
+<p>这将推送删除的文件变更到远程分支 ``。</p></li>
+</ol>
+<h2 id="ssh使用方法">ssh使用方法</h2>
+<p>下面是使用 SSH 的一般操作步骤：</p>
+<ol type="1">
+<li><strong>生成 SSH 密钥对：</strong> 在客户端生成 SSH 密钥对，包括公钥和私钥。你可以使用以下命令生成 SSH 密钥对：</li>
+</ol>
+<pre><code>ssh-keygen -t rsa -b 2048 -C &quot;your_email@example.com&quot;</code></pre>
+<p>这个命令会生成一个 RSA 类型的密钥对，并将其保存在默认的路径（通常是 <code>~/.ssh/id_rsa</code>）。</p>
+<ol start="2" type="1">
+<li><strong>将公钥添加到服务器：</strong> 将生成的公钥（通常是 <code>~/.ssh/id_rsa.pub</code> 文件中的内容）添加到服务器的 <code>~/.ssh/authorized_keys</code> 文件中。这样，客户端就可以使用私钥与服务器进行安全通信了。</li>
+</ol>
+<pre><code>ssh-copy-id user@server_ip</code></pre>
+<ol start="3" type="1">
+<li><strong>使用 SSH 连接服务器：</strong> 客户端可以使用以下命令连接到服务器：</li>
+</ol>
+<pre><code>ssh user@server_ip</code></pre>
+<p>在连接时，SSH 会使用客户端的私钥对通信进行加密和认证，以确保连接的安全性。如果私钥与服务器的公钥匹配，连接将会成功建立。</p>
 <h2 id="创建链接以及使用方法">创建链接以及使用方法</h2>
 <h3 id="创建链接的方法">创建链接的方法</h3>
 <p>ln -s /path/to/target /path/to/symlink</p>
@@ -1316,8 +1355,8 @@ application/rtf=emacs.desktop</code></pre>
 <h2 id="咸鱼">咸鱼</h2>
 <h3 id="咸鱼网站"><a href="https://www.goofish.com/">咸鱼网站</a></h3>
 <p>咸鱼是阿里巴巴出品的一个二手买卖平台，里面有很多二手和闲置的东西，有的价格很低，但是也并非全都如此。当咸鱼变得逐渐普及之后，有一些咸鱼开店的程序也应运而生，比如</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
 <p>以上是一个例子。</p>
 <p><a name="typora"> </a></p>
 <h1 id="typora">typora</h1>
