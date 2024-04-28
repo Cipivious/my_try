@@ -913,6 +913,18 @@ ctrl + F 查找替换
 
 ### [oschina](https://tool.oschina.net/regex#)
 
+## 文件格式转化工具
+
+### pandoc
+
+#### [官方网站](https://support.typora.io/Install-and-Use-Pandoc/)
+
+#### [教程](https://zhuanlan.zhihu.com/p/542683108)
+
+sudo apt install pandoc
+
+ pandoc --standalone --self-contained --metadata title="Your Document Title" --css ../.config/Typora/themes/github.css resource.md --output resource2.html 
+
 <a name="computer-knowledge"> </a>
 
 # computer-knowledge
