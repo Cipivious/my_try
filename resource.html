@@ -693,6 +693,7 @@ overflow-wrap: break-word;
 <li><a href="#学习笔记-1">学习笔记</a></li>
 <li><a href="#加载html速度">加载html速度</a></li>
 <li><a href="#页面宽度调整">页面宽度调整</a></li>
+<li><a href="#chrome查看手机端样式">Chrome查看手机端样式</a></li>
 </ul></li>
 <li><a href="#javascript">javascript</a>
 <ul>
@@ -711,6 +712,8 @@ overflow-wrap: break-word;
 </ul></li>
 <li><a href="#linux">linux</a>
 <ul>
+<li><a href="#静默打开">静默打开</a></li>
+<li><a href="#复制">复制</a></li>
 <li><a href="#执行定时任务">执行定时任务</a></li>
 <li><a href="#systemctl">systemctl</a></li>
 <li><a href="#使用git">使用git</a></li>
@@ -1069,6 +1072,7 @@ overflow-wrap: break-word;
 </ol>
 <h4 id="css样式大全">css样式大全</h4>
 <p><a href="file:///home/yang/ebooks/web/css.pdf">css样式</a></p>
+<p><a href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&amp;subset=latin,latin-ext">这是google默认的字体css</a></p>
 <h4 id="使用浏览器的开发者工具">使用浏览器的开发者工具</h4>
 <p>浏览器的开发者工具具有非常强大的功能</p>
 <ul>
@@ -1104,6 +1108,30 @@ overflow-wrap: break-word;
 <p>通过结合以上多种缓存策略，可以实现在用户第一次加载页面时形成缓存，并在下次访问时快速加载页面内容。需要根据页面特点和需求选择合适的缓存策略，并进行相应的实现和配置。</p>
 <h2 id="页面宽度调整">页面宽度调整</h2>
 <p><a href="https://blog.csdn.net/wusuopuBUPT/article/details/21941343">HTML适应手机浏览器宽度</a></p>
+<h2 id="chrome查看手机端样式">Chrome查看手机端样式</h2>
+<p>要使用 Google Chrome 的开发者工具查看网页在手机上的效果，可以按照以下步骤操作：</p>
+<ol type="1">
+<li>打开 Google Chrome 浏览器，并进入你想要查看的网页。</li>
+<li>打开开发者工具：
+<ul>
+<li>在 Windows 或 Linux 上，按下 <code>F12</code> 键或者 <code>Ctrl + Shift + I</code> 组合键。</li>
+<li>在 macOS 上，按下 <code>Cmd + Opt + I</code> 组合键。</li>
+</ul></li>
+<li>进入移动设备模拟器模式：
+<ul>
+<li>在开发者工具的顶部菜单栏中，点击 Toggle Device Toolbar 图标（或者按下 <code>Ctrl + Shift + M</code>），即可进入移动设备模拟器模式。</li>
+</ul></li>
+<li>选择要模拟的设备类型：
+<ul>
+<li>在工具栏的左上角，点击下拉菜单按钮，选择你想要模拟的移动设备类型，如 iPhone、iPad 等。</li>
+<li>或者点击 Responsive 按钮，手动调整视口大小和缩放比例。</li>
+</ul></li>
+<li>查看网页效果：
+<ul>
+<li>此时，你会看到网页以模拟设备的尺寸和分辨率显示在开发者工具中。</li>
+<li>你可以在模拟器中与网页进行交互，查看在不同设备上的显示效果，并且可以检查调试网页中的元素和样式。</li>
+</ul></li>
+</ol>
 <p><a name="javascript"> </a></p>
 <h1 id="javascript">javascript</h1>
 <h2 id="运行环境">运行环境</h2>
@@ -1226,6 +1254,21 @@ overflow-wrap: break-word;
 <h3 id="csdn-增强"><a href="https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">CSDN 增强</a></h3>
 <p><a name="linux"> </a></p>
 <h1 id="linux">linux</h1>
+<h2 id="静默打开">静默打开</h2>
+<p>silence() { open $1 &gt;/dev/null 2&gt;&amp;1 &amp; }</p>
+<p><a href="file:///home/yang/.bashrc">参见这里</a></p>
+<h2 id="复制">复制</h2>
+<p><code>xclip</code> 是一个在 Linux 系统中用于与剪贴板进行交互的命令行工具。要使用 <code>xclip</code> 复制文件到剪贴板，你可以使用以下命令：</p>
+<pre><code>xclip -selection clipboard -t &lt;MIME_type&gt; -i &lt;file_path&gt;</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>-selection clipboard</code> 表示选择剪贴板作为目标。</li>
+<li><code>-t &lt;MIME_type&gt;</code> 指定要复制的数据的 MIME 类型。对于文件，通常可以使用 <code>application/octet-stream</code>。</li>
+<li><code>-i &lt;file_path&gt;</code> 指定要复制的文件的路径。</li>
+</ul>
+<p>例如，要将文件 <code>example.txt</code> 复制到剪贴板，可以运行以下命令：</p>
+<pre><code>xclip -selection clipboard -t application/octet-stream -i example.txt</code></pre>
+<p>运行这个命令后，文件 <code>example.txt</code> 的内容将被复制到剪贴板中。你可以在其他应用程序中使用粘贴操作（通常是使用 Ctrl+V）来粘贴这个文件的内容。</p>
 <h2 id="执行定时任务">执行定时任务</h2>
 <h3 id="查看定时任务当前用户">查看定时任务(当前用户)</h3>
 <p>crontab -l</p>
@@ -1408,8 +1451,8 @@ application/rtf=emacs.desktop</code></pre>
 <h2 id="咸鱼">咸鱼</h2>
 <h3 id="咸鱼网站"><a href="https://www.goofish.com/">咸鱼网站</a></h3>
 <p>咸鱼是阿里巴巴出品的一个二手买卖平台，里面有很多二手和闲置的东西，有的价格很低，但是也并非全都如此。当咸鱼变得逐渐普及之后，有一些咸鱼开店的程序也应运而生，比如</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
 <p>以上是一个例子。</p>
 <p><a name="typora"> </a></p>
 <h1 id="typora">typora</h1>

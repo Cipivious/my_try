@@ -393,6 +393,8 @@ emacs修改文件过程
 
 [css样式](file:///home/yang/ebooks/web/css.pdf)
 
+[这是google默认的字体css](https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext)
+
 #### 使用浏览器的开发者工具
 
 浏览器的开发者工具具有非常强大的功能
@@ -437,6 +439,23 @@ emacs修改文件过程
 ## 页面宽度调整
 
 [HTML适应手机浏览器宽度](https://blog.csdn.net/wusuopuBUPT/article/details/21941343)
+
+## Chrome查看手机端样式
+
+要使用 Google Chrome 的开发者工具查看网页在手机上的效果，可以按照以下步骤操作：
+
+1. 打开 Google Chrome 浏览器，并进入你想要查看的网页。
+2. 打开开发者工具：
+   - 在 Windows 或 Linux 上，按下 `F12` 键或者 `Ctrl + Shift + I` 组合键。
+   - 在 macOS 上，按下 `Cmd + Opt + I` 组合键。
+3. 进入移动设备模拟器模式：
+   - 在开发者工具的顶部菜单栏中，点击 Toggle Device Toolbar 图标（或者按下 `Ctrl + Shift + M`），即可进入移动设备模拟器模式。
+4. 选择要模拟的设备类型：
+   - 在工具栏的左上角，点击下拉菜单按钮，选择你想要模拟的移动设备类型，如 iPhone、iPad 等。
+   - 或者点击 Responsive 按钮，手动调整视口大小和缩放比例。
+5. 查看网页效果：
+   - 此时，你会看到网页以模拟设备的尺寸和分辨率显示在开发者工具中。
+   - 你可以在模拟器中与网页进行交互，查看在不同设备上的显示效果，并且可以检查调试网页中的元素和样式。
 
 
 
@@ -622,6 +641,36 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 <a name="linux"> </a>
 
 # linux 
+
+## 静默打开
+
+silence() {
+    open $1 >/dev/null 2>&1 &
+}
+
+[参见这里](file:///home/yang/.bashrc)
+
+## 复制
+
+`xclip` 是一个在 Linux 系统中用于与剪贴板进行交互的命令行工具。要使用 `xclip` 复制文件到剪贴板，你可以使用以下命令：
+
+```
+xclip -selection clipboard -t <MIME_type> -i <file_path>
+```
+
+其中：
+
+- `-selection clipboard` 表示选择剪贴板作为目标。
+- `-t <MIME_type>` 指定要复制的数据的 MIME 类型。对于文件，通常可以使用 `application/octet-stream`。
+- `-i <file_path>` 指定要复制的文件的路径。
+
+例如，要将文件 `example.txt` 复制到剪贴板，可以运行以下命令：
+
+```
+xclip -selection clipboard -t application/octet-stream -i example.txt
+```
+
+运行这个命令后，文件 `example.txt` 的内容将被复制到剪贴板中。你可以在其他应用程序中使用粘贴操作（通常是使用 Ctrl+V）来粘贴这个文件的内容。
 
 ## 执行定时任务
 
