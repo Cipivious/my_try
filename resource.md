@@ -56,6 +56,26 @@ grok 是 X 公司研发的一个模型，它有开源的版本
 
 ## [程序员入门](https://www.wolfram.com/language/fast-introduction-for-programmers/zh/iterators/)
 
+## 统计
+
+### Tally
+
+在 Mathematica 中，你可以使用 Tally 函数来统计列表中元素的出现次数。以下是一个例子：
+
+```
+mathematicaCopy codelist = {1, 2, 3, 1, 2, 1, 3, 4, 5};
+Tally[list]
+```
+
+这将返回一个列表，其中每个元素是一个包含元素和它在原列表中出现的次数的列表。例如，对于上面的示例列表，输出可能是 `{{1, 3}, {2, 2}, {3, 2}, {4, 1}, {5, 1}}`，表示元素 1 出现了 3 次，元素 2 出现了 2 次，依此类推。
+
+### BarChart
+
+BarChart[new[[1 ;; 20  1, 2]], ChartStyle -> "Pastel", 
+ ChartLegends -> new[[1 ;; 20 , 1, 1]]]
+
+参考 web.nb
+
 <a name="Neural-Network"> </a>
 
 # Neural-Network
@@ -463,6 +483,12 @@ emacs修改文件过程
 
 # javascript
 
+## 排查错误
+
+### 命名方式
+
+小驼峰法命名，getElementById 不是 getElementByid
+
 ## 运行环境
 
 ### [nodejs官方文档](https://nodejs.org/docs/latest/api/documentation.html)
@@ -642,6 +668,86 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 
 # linux 
 
+## archlinux启动盘制作
+
+[教程](https://juejin.cn/post/7223674554220478521)
+
+## 亮度条件
+
+[亮度调节](https://blog.csdn.net/ftimes/article/details/119907899)
+
+## ubuntu包管理器
+
+### snap商店
+
+### dpkg （debain package manager）
+
+dpkg --list
+
+dpkg --remove
+
+dpkg --purge
+
+### apt
+
+## 创建应用图标
+
+### 应用图标路径
+
+~/.local/share
+
+### 应用图标例子
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=Joplin
+Comment=Joplin for Desktop
+Exec=/home/yang/.joplin/Joplin.AppImage  %u
+Icon=joplin
+StartupWMClass=Joplin
+Type=Application
+Categories=Office;
+MimeType=x-scheme-handler/joplin;
+X-GNOME-SingleWindow=true // should be removed eventually as it was upstream to be an XDG specification
+SingleMainWindow=true
+
+## 邮件系统
+
+MTA（Mail Transfer Agent）是用于发送和路由电子邮件的软件。常见的 MTA 包括 Postfix、Sendmail、Exim 等。以下是一般步骤来设置和使用 MTA：
+
+1. **安装 MTA**：首先，你需要安装一个 MTA。在 Ubuntu 和 Debian 等 Linux 发行版上，你可以使用包管理器来安装，例如：
+
+   ```
+   sudo apt-get update
+   sudo apt-get install postfix
+   ```
+
+   上述命令会安装 Postfix MTA。
+
+2. **配置 MTA**：安装完成后，你需要对 MTA 进行一些配置。Postfix 的配置文件通常位于 `/etc/postfix/main.cf`。你可以编辑这个文件来配置域名、邮箱别名、邮件转发规则等。
+
+3. **启动 MTA 服务**：配置完成后，你需要启动 MTA 服务。在大多数情况下，安装完成后 MTA 会自动启动，你可以使用以下命令来确认服务是否正在运行：
+
+   ```
+   sudo systemctl status postfix
+   ```
+
+   如果服务没有运行，你可以使用以下命令来启动：
+
+   ```
+   sudo systemctl start postfix
+   ```
+
+4. **测试发送邮件**：配置完成后，你可以测试 MTA 是否正常工作。你可以使用命令行工具 `mail` 来发送测试邮件：
+
+   ```
+   echo "This is a test email" | mail -s "Test Email" recipient@example.com
+   ```
+
+   替换 `recipient@example.com` 为你自己的邮箱地址。如果一切正常，你应该会收到一封来自你的服务器的测试邮件。
+
+5. **查看日志**：如果遇到问题，你可以查看 MTA 的日志文件来排查。Postfix 的日志文件通常位于 `/var/log/mail.log` 或 `/var/log/maillog`。
+
 ## 静默打开
 
 silence() {
@@ -691,6 +797,20 @@ m h m d y /home/yang/typora/run.sh
 使用 `grep CRON /var/log/syslog` 可以筛选出定时文件的执行情况
 
 ## systemctl
+
+### 相关方法
+
+在启动图形界面后运行脚本并不适合使用 crontab，因为 crontab 通常用于周期性地执行任务，而不是在特定事件（比如启动图形界面）发生后执行任务。在 Linux 系统中，运行在图形界面环境下的程序通常需要一些特殊的设置，以便在用户登录后自动启动。
+
+要在启动图形界面后运行脚本，你可以将脚本添加到登录时执行的文件中。在大多数 Linux 发行版中，可以使用以下方法之一：
+
+1. **用户登录脚本：** 将你的脚本添加到用户的登录脚本中。例如，在大多数 Linux 系统中，可以编辑用户的 `.bash_profile` 或 `.profile` 文件，并在文件末尾添加你的脚本。这样，在用户登录后，该脚本就会被执行。
+2. **桌面环境的自启动目录：** 桌面环境通常提供了一个专门的目录，用于存放用户登录后要自动运行的程序。例如，在 GNOME 桌面环境中，可以将脚本放置在 `~/.config/autostart/` 目录中。这样，在用户登录后，桌面环境会自动运行该脚本。
+3. **使用 systemd 用户服务：** 你还可以创建一个 systemd 用户服务，使得它在用户登录后自动启动。这可以通过编写一个特定格式的服务单元文件，并将它放置在 `~/.config/systemd/user/` 目录中来实现。然后使用 `systemctl --user enable your-service.service` 命令来启用该服务。
+
+### [官方教程](https://systemd.io/)
+
+### [高级用法教程](https://ioflood.com/blog/systemctl-linux-command/#:~:text=It%20is%20a%20highly%20customizable,configure%20them%20to%20your%20needs.&text=In%20this%20example%2C%20we%20use,service%20)
 
 ### 开机
 
@@ -900,6 +1020,8 @@ lspci
 cat /proc/meminfo
 
 ### 查看硬盘信息
+
+sudo du -h --max-depth=1 查看硬盘空间使用情况
 
 lsblk
 
