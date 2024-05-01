@@ -640,6 +640,16 @@ overflow-wrap: break-word;
 </head>
 <body>
 <div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
+<div id="top"></div>
 <header id="title-block-header">
 <h1 class="title">My NoteBook</h1>
 </header>
@@ -663,7 +673,6 @@ overflow-wrap: break-word;
 <li><a href="#wolfram">Wolfram</a>
 <ul>
 <li><a href="#程序员入门"><span>程序员入门</span></a></li>
-<li><a href="#统计">统计</a></li>
 </ul></li>
 <li><a href="#neural-network">Neural-Network</a>
 <ul>
@@ -698,7 +707,6 @@ overflow-wrap: break-word;
 </ul></li>
 <li><a href="#javascript">javascript</a>
 <ul>
-<li><a href="#排查错误">排查错误</a></li>
 <li><a href="#运行环境">运行环境</a></li>
 </ul></li>
 <li><a href="#python">python</a>
@@ -714,11 +722,6 @@ overflow-wrap: break-word;
 </ul></li>
 <li><a href="#linux">linux</a>
 <ul>
-<li><a href="#archlinux启动盘制作">archlinux启动盘制作</a></li>
-<li><a href="#亮度条件">亮度条件</a></li>
-<li><a href="#ubuntu包管理器">ubuntu包管理器</a></li>
-<li><a href="#创建应用图标">创建应用图标</a></li>
-<li><a href="#邮件系统">邮件系统</a></li>
 <li><a href="#静默打开">静默打开</a></li>
 <li><a href="#复制">复制</a></li>
 <li><a href="#执行定时任务">执行定时任务</a></li>
@@ -836,15 +839,6 @@ overflow-wrap: break-word;
 <p><a name="Wolfram"> </a></p>
 <h1 id="wolfram">Wolfram</h1>
 <h2 id="程序员入门"><a href="https://www.wolfram.com/language/fast-introduction-for-programmers/zh/iterators/">程序员入门</a></h2>
-<h2 id="统计">统计</h2>
-<h3 id="tally">Tally</h3>
-<p>在 Mathematica 中，你可以使用 Tally 函数来统计列表中元素的出现次数。以下是一个例子：</p>
-<pre><code>mathematicaCopy codelist = {1, 2, 3, 1, 2, 1, 3, 4, 5};
-Tally[list]</code></pre>
-<p>这将返回一个列表，其中每个元素是一个包含元素和它在原列表中出现的次数的列表。例如，对于上面的示例列表，输出可能是 <code>{{1, 3}, {2, 2}, {3, 2}, {4, 1}, {5, 1}}</code>，表示元素 1 出现了 3 次，元素 2 出现了 2 次，依此类推。</p>
-<h3 id="barchart">BarChart</h3>
-<p>BarChart[new[[1 ;; 20 1, 2]], ChartStyle -&gt; “Pastel”, ChartLegends -&gt; new[[1 ;; 20 , 1, 1]]]</p>
-<p>参考 web.nb</p>
 <p><a name="Neural-Network"> </a></p>
 <h1 id="neural-network">Neural-Network</h1>
 <h2 id="学习笔记">学习笔记</h2>
@@ -1150,9 +1144,6 @@ Tally[list]</code></pre>
 </ol>
 <p><a name="javascript"> </a></p>
 <h1 id="javascript">javascript</h1>
-<h2 id="排查错误">排查错误</h2>
-<h3 id="命名方式">命名方式</h3>
-<p>小驼峰法命名，getElementById 不是 getElementByid</p>
 <h2 id="运行环境">运行环境</h2>
 <h3 id="nodejs官方文档"><a href="https://nodejs.org/docs/latest/api/documentation.html">nodejs官方文档</a></h3>
 <table>
@@ -1197,41 +1188,41 @@ Tally[list]</code></pre>
 <h4 id="重新安装">重新安装</h4>
 <p><a href="https://github.com/nvm-sh/nvm">从该界面下载nvm</a></p>
 <p>添加配置文件</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh <span class="kw">|</span> <span class="fu">bash</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  <span class="ex">%</span> Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>                                 <span class="ex">Dload</span>  Upload   Total   Spent    Left  Speed</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>  <span class="ex">0</span>     0    0     0    0     0      0      0 --:--:-- --:--:-- -  0     0    0     0    0     0      0      0 --:--:-- --:--:-- -100 16555  100 16555    0     0  22238      0 --:--:-- --:--:-- --:--:-- 22221</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Downloading</span> nvm from git to <span class="st">&#39;/home/yang/.nvm&#39;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>=<span class="op">&gt;</span> 正克隆到 <span class="st">&#39;/home/yang/.nvm&#39;</span><span class="ex">...</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="ex">remote</span>: Enumerating objects: 365, done.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="ex">remote</span>: Counting objects: 100% (365/365), <span class="kw">done</span><span class="ex">.</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="ex">remote</span>: Compressing objects: 100% (313/313), <span class="kw">done</span><span class="ex">.</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="ex">remote</span>: Total 365 (delta 43), <span class="ex">reused</span> 165 (delta 26), <span class="ex">pack-reused</span> 0</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>接收对象中: <span class="ex">100%</span> (365/365), <span class="ex">365.08</span> KiB <span class="kw">|</span> <span class="ex">1.03</span> MiB/s, 完成.</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>处理 <span class="ex">delta</span> 中: 100% (43/43), 完成<span class="ex">.</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="ex">*</span> （头指针在 FETCH_HEAD 分离）</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>  <span class="ex">master</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Compressing</span> and cleaning up git repository</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">nvm</span> source string already in /home/yang/.bashrc</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">bash_completion</span> source string already in /home/yang/.bashrc</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Close</span> and reopen your terminal to start using nvm or run the following to use it now:</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a><span class="bu">export</span> <span class="va">NVM_DIR=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.nvm&quot;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a><span class="bu">[</span> <span class="ot">-s</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/nvm.sh&quot;</span><span class="bu"> ]</span> <span class="kw">&amp;&amp;</span> \<span class="bu">.</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/nvm.sh&quot;</span>  # <span class="ex">This</span> loads nvm</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a><span class="bu">[</span> <span class="ot">-s</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/bash_completion&quot;</span><span class="bu"> ]</span> <span class="kw">&amp;&amp;</span> \<span class="bu">.</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/bash_completion&quot;</span>  # <span class="ex">This</span> loads nvm bash_completion</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ ema .bashrc</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ source .bashrc</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ nvm --version</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a><span class="ex">0.39.7</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ nvm install node</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a><span class="ex">Downloading</span> and installing node v22.0.0...</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a><span class="ex">Downloading</span> https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-x64.tar.xz...</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a><span class="co">########################################################## 100.0%</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a><span class="ex">Computing</span> checksum with sha256sum</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a><span class="ex">Checksums</span> matched!</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a><span class="ex">Now</span> using node v22.0.0 (npm v10.5.1)</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a><span class="ex">Creating</span> default alias: default -<span class="op">&gt;</span> node (-<span class="op">&gt;</span> v22.0.0)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh <span class="kw">|</span> <span class="fu">bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="ex">%</span> Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>                                 <span class="ex">Dload</span>  Upload   Total   Spent    Left  Speed</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  <span class="ex">0</span>     0    0     0    0     0      0      0 --:--:-- --:--:-- -  0     0    0     0    0     0      0      0 --:--:-- --:--:-- -100 16555  100 16555    0     0  22238      0 --:--:-- --:--:-- --:--:-- 22221</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Downloading</span> nvm from git to <span class="st">&#39;/home/yang/.nvm&#39;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>=<span class="op">&gt;</span> 正克隆到 <span class="st">&#39;/home/yang/.nvm&#39;</span><span class="ex">...</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="ex">remote</span>: Enumerating objects: 365, done.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="ex">remote</span>: Counting objects: 100% (365/365), <span class="kw">done</span><span class="ex">.</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="ex">remote</span>: Compressing objects: 100% (313/313), <span class="kw">done</span><span class="ex">.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="ex">remote</span>: Total 365 (delta 43), <span class="ex">reused</span> 165 (delta 26), <span class="ex">pack-reused</span> 0</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>接收对象中: <span class="ex">100%</span> (365/365), <span class="ex">365.08</span> KiB <span class="kw">|</span> <span class="ex">1.03</span> MiB/s, 完成.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>处理 <span class="ex">delta</span> 中: 100% (43/43), 完成<span class="ex">.</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a><span class="ex">*</span> （头指针在 FETCH_HEAD 分离）</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>  <span class="ex">master</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Compressing</span> and cleaning up git repository</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">nvm</span> source string already in /home/yang/.bashrc</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">bash_completion</span> source string already in /home/yang/.bashrc</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>=<span class="op">&gt;</span> <span class="ex">Close</span> and reopen your terminal to start using nvm or run the following to use it now:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="bu">export</span> <span class="va">NVM_DIR=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.nvm&quot;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="bu">[</span> <span class="ot">-s</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/nvm.sh&quot;</span><span class="bu"> ]</span> <span class="kw">&amp;&amp;</span> \<span class="bu">.</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/nvm.sh&quot;</span>  # <span class="ex">This</span> loads nvm</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a><span class="bu">[</span> <span class="ot">-s</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/bash_completion&quot;</span><span class="bu"> ]</span> <span class="kw">&amp;&amp;</span> \<span class="bu">.</span> <span class="st">&quot;</span><span class="va">$NVM_DIR</span><span class="st">/bash_completion&quot;</span>  # <span class="ex">This</span> loads nvm bash_completion</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ ema .bashrc</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ source .bashrc</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ nvm --version</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a><span class="ex">0.39.7</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="kw">(</span><span class="ex">d2l2</span><span class="kw">)</span> <span class="ex">yang@yang-HP-Pavilion-Laptop-14-dv0xxx</span>:~$ nvm install node</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a><span class="ex">Downloading</span> and installing node v22.0.0...</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a><span class="ex">Downloading</span> https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-x64.tar.xz...</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a><span class="co">########################################################## 100.0%</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a><span class="ex">Computing</span> checksum with sha256sum</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a><span class="ex">Checksums</span> matched!</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a><span class="ex">Now</span> using node v22.0.0 (npm v10.5.1)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a><span class="ex">Creating</span> default alias: default -<span class="op">&gt;</span> node (-<span class="op">&gt;</span> v22.0.0)</span></code></pre></div>
 <p><a name="python"> </a></p>
 <h1 id="python">python</h1>
 <h2 id="python-程序包">python 程序包</h2>
@@ -1273,39 +1264,6 @@ Tally[list]</code></pre>
 <h3 id="csdn-增强"><a href="https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">CSDN 增强</a></h3>
 <p><a name="linux"> </a></p>
 <h1 id="linux">linux</h1>
-<h2 id="archlinux启动盘制作">archlinux启动盘制作</h2>
-<p><a href="https://juejin.cn/post/7223674554220478521">教程</a></p>
-<h2 id="亮度条件">亮度条件</h2>
-<p><a href="https://blog.csdn.net/ftimes/article/details/119907899">亮度调节</a></p>
-<h2 id="ubuntu包管理器">ubuntu包管理器</h2>
-<h3 id="snap商店">snap商店</h3>
-<h3 id="dpkg-debain-package-manager">dpkg （debain package manager）</h3>
-<p>dpkg –list</p>
-<p>dpkg –remove</p>
-<p>dpkg –purge</p>
-<h3 id="apt">apt</h3>
-<h2 id="创建应用图标">创建应用图标</h2>
-<h3 id="应用图标路径">应用图标路径</h3>
-<p>~/.local/share</p>
-<h3 id="应用图标例子">应用图标例子</h3>
-<p>[Desktop Entry] Encoding=UTF-8 Name=Joplin Comment=Joplin for Desktop Exec=/home/yang/.joplin/Joplin.AppImage %u Icon=joplin StartupWMClass=Joplin Type=Application Categories=Office; MimeType=x-scheme-handler/joplin; X-GNOME-SingleWindow=true // should be removed eventually as it was upstream to be an XDG specification SingleMainWindow=true</p>
-<h2 id="邮件系统">邮件系统</h2>
-<p>MTA（Mail Transfer Agent）是用于发送和路由电子邮件的软件。常见的 MTA 包括 Postfix、Sendmail、Exim 等。以下是一般步骤来设置和使用 MTA：</p>
-<ol type="1">
-<li><p><strong>安装 MTA</strong>：首先，你需要安装一个 MTA。在 Ubuntu 和 Debian 等 Linux 发行版上，你可以使用包管理器来安装，例如：</p>
-<pre><code>sudo apt-get update
-sudo apt-get install postfix</code></pre>
-<p>上述命令会安装 Postfix MTA。</p></li>
-<li><p><strong>配置 MTA</strong>：安装完成后，你需要对 MTA 进行一些配置。Postfix 的配置文件通常位于 <code>/etc/postfix/main.cf</code>。你可以编辑这个文件来配置域名、邮箱别名、邮件转发规则等。</p></li>
-<li><p><strong>启动 MTA 服务</strong>：配置完成后，你需要启动 MTA 服务。在大多数情况下，安装完成后 MTA 会自动启动，你可以使用以下命令来确认服务是否正在运行：</p>
-<pre><code>sudo systemctl status postfix</code></pre>
-<p>如果服务没有运行，你可以使用以下命令来启动：</p>
-<pre><code>sudo systemctl start postfix</code></pre></li>
-<li><p><strong>测试发送邮件</strong>：配置完成后，你可以测试 MTA 是否正常工作。你可以使用命令行工具 <code>mail</code> 来发送测试邮件：</p>
-<pre><code>echo &quot;This is a test email&quot; | mail -s &quot;Test Email&quot; recipient@example.com</code></pre>
-<p>替换 <code>recipient@example.com</code> 为你自己的邮箱地址。如果一切正常，你应该会收到一封来自你的服务器的测试邮件。</p></li>
-<li><p><strong>查看日志</strong>：如果遇到问题，你可以查看 MTA 的日志文件来排查。Postfix 的日志文件通常位于 <code>/var/log/mail.log</code> 或 <code>/var/log/maillog</code>。</p></li>
-</ol>
 <h2 id="静默打开">静默打开</h2>
 <p>silence() { open $1 &gt;/dev/null 2&gt;&amp;1 &amp; }</p>
 <p><a href="file:///home/yang/.bashrc">参见这里</a></p>
@@ -1331,16 +1289,6 @@ sudo apt-get install postfix</code></pre>
 <p>/var/log/syslog 中存放着系统执行文件的记录，可以从里面查看执行情况</p>
 <p>使用 <code>grep CRON /var/log/syslog</code> 可以筛选出定时文件的执行情况</p>
 <h2 id="systemctl">systemctl</h2>
-<h3 id="相关方法">相关方法</h3>
-<p>在启动图形界面后运行脚本并不适合使用 crontab，因为 crontab 通常用于周期性地执行任务，而不是在特定事件（比如启动图形界面）发生后执行任务。在 Linux 系统中，运行在图形界面环境下的程序通常需要一些特殊的设置，以便在用户登录后自动启动。</p>
-<p>要在启动图形界面后运行脚本，你可以将脚本添加到登录时执行的文件中。在大多数 Linux 发行版中，可以使用以下方法之一：</p>
-<ol type="1">
-<li><strong>用户登录脚本：</strong> 将你的脚本添加到用户的登录脚本中。例如，在大多数 Linux 系统中，可以编辑用户的 <code>.bash_profile</code> 或 <code>.profile</code> 文件，并在文件末尾添加你的脚本。这样，在用户登录后，该脚本就会被执行。</li>
-<li><strong>桌面环境的自启动目录：</strong> 桌面环境通常提供了一个专门的目录，用于存放用户登录后要自动运行的程序。例如，在 GNOME 桌面环境中，可以将脚本放置在 <code>~/.config/autostart/</code> 目录中。这样，在用户登录后，桌面环境会自动运行该脚本。</li>
-<li><strong>使用 systemd 用户服务：</strong> 你还可以创建一个 systemd 用户服务，使得它在用户登录后自动启动。这可以通过编写一个特定格式的服务单元文件，并将它放置在 <code>~/.config/systemd/user/</code> 目录中来实现。然后使用 <code>systemctl --user enable your-service.service</code> 命令来启用该服务。</li>
-</ol>
-<h3 id="官方教程"><a href="https://systemd.io/">官方教程</a></h3>
-<h3 id="高级用法教程"><a href="https://ioflood.com/blog/systemctl-linux-command/#:~:text=It%20is%20a%20highly%20customizable,configure%20them%20to%20your%20needs.&amp;text=In%20this%20example%2C%20we%20use,service%20">高级用法教程</a></h3>
 <h3 id="开机">开机</h3>
 <p>在 Linux 系统中，您可以通过编辑启动脚本或者使用系统服务来实现在开机或关机时自动执行脚本的功能。</p>
 <ol type="1">
@@ -1464,7 +1412,6 @@ sudo systemctl enable your-shutdown-hook.service</code></pre>
 <h3 id="查看内存信息">查看内存信息</h3>
 <p>cat /proc/meminfo</p>
 <h3 id="查看硬盘信息">查看硬盘信息</h3>
-<p>sudo du -h –max-depth=1 查看硬盘空间使用情况</p>
 <p>lsblk</p>
 <h3 id="查看全部的信息">查看全部的信息</h3>
 <p>lshw</p>
@@ -1514,8 +1461,8 @@ application/rtf=emacs.desktop</code></pre>
 <h2 id="咸鱼">咸鱼</h2>
 <h3 id="咸鱼网站"><a href="https://www.goofish.com/">咸鱼网站</a></h3>
 <p>咸鱼是阿里巴巴出品的一个二手买卖平台，里面有很多二手和闲置的东西，有的价格很低，但是也并非全都如此。当咸鱼变得逐渐普及之后，有一些咸鱼开店的程序也应运而生，比如</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>点击链接直接打开</span></code></pre></div>
 <p>以上是一个例子。</p>
 <p><a name="typora"> </a></p>
 <h1 id="typora">typora</h1>
@@ -2006,6 +1953,36 @@ A [link](#this-is-a-title) to jump towards target heading</code></pre>
 <p>redis</p>
 <p>fileinfo</p>
 <p>End</p>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
+<div id="scroll-to-top">
+  <a href="#top">回到顶部</a>
+</div>
 <div id="scroll-to-top">
   <a href="#top">回到顶部</a>
 </div>

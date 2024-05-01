@@ -668,10 +668,6 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 
 # linux 
 
-## archlinux启动盘制作
-
-[教程](https://juejin.cn/post/7223674554220478521)
-
 ## 亮度条件
 
 [亮度调节](https://blog.csdn.net/ftimes/article/details/119907899)
