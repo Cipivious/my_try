@@ -120,8 +120,6 @@ pytorch 中有一个方法可以自动的批量进行随机模拟，产生具体
 
 - #### 线性回归的简洁实现
 
-!神经网络的基本框架](/home/yang/Pictures/machine_learning/基本框架.png)
-
 - #### softmax 回归
 
 主要区别于线性拟合的地方，在于使用的函数不相同，softmax 可以将结果映射成分类后的结果，而线性拟合的结果是连续的
@@ -136,8 +134,6 @@ pytorch 中有一个方法可以自动的批量进行随机模拟，产生具体
 
 它对多层感知机做了一个简单的介绍，它主要突出了上面的层的概念。
 
-!layers](/home/yang/Pictures/machine_learning/layers.png)
-
 - #### 多层感知器的简洁实现
 
 它和之前线性回归的整体框架是类似的，主要区别只在于它中间的层级结构更多了一些，计算更复杂了一些
@@ -149,8 +145,6 @@ pytorch 中有一个方法可以自动的批量进行随机模拟，产生具体
 - #### 权重衰减
 
 - #### 向前传播
-
-<img src="/home/yang/Pictures/machine_learning/forward.svg" alt="前向传播" style="zoom:150%;" />
 
 - #### 训练神经网络
 
