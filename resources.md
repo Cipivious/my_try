@@ -3,6 +3,7 @@
 # Tasks
 
 - [ ] ...
+- [ ] [学习这个系列的emacs配置教程](#专业 Emacs 入门（十）：笔记系统 org-mode)
 - [x] [学习python-markdown](#python-markdown)
 - [x] [学习nodejs](#运行环境)
 - [x] 域名备案完成
@@ -373,7 +374,21 @@ emacs修改文件过程
 
 !image-20240425092053868](/home/yang/.config/Typora/typora-user-images/image-20240425092053868.png)
 
-<a name="html"> </a>
+## 关于编辑器的一些议论
+
+### [为什么还有人用VIM](https://www.zhihu.com/question/547708456/answer/2645630850?utm_psn=1768532068147818497)
+
+### [Excalidraw](https://www.zhihu.com/question/465346075/answer/3091803862?utm_psn=1769031940265664512)
+
+### [专业 Emacs 入门（十）：笔记系统 org-mode](https://zhuanlan.zhihu.com/p/633047823?utm_psn=1769030680720388096)
+
+### [emacs配置文件参考](https://github.com/cabins/emacs.d)
+
+### [这是一个linux的学习笔记，里面包含了很多配置vim的实际教程](https://github.com/cubxxw/awesome-cs-course/tree/master/linux)
+
+### [这也是一个介绍vim优势的文章](https://www.zhihu.com/question/547708456/answer/2645630850?utm_psn=1768532068147818497)
+
+
 
 # html
 
@@ -661,6 +676,43 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 <a name="linux"> </a>
 
 # linux 
+
+## ubuntu24.04双系统重装教程
+
+[附一个archlinux启动盘制作的安装教程](https://zhuanlan.zhihu.com/p/405352705?utm_id=0)
+
+[这是一个安装archlinux的教程](https://juejin.cn/post/7224418285797965884)
+
+### 刻录系统
+
+### 进入BIOS模式使用usb启动
+
+### 这里主要讲硬盘分区那里
+
+由于我是双系统，所以在安装的的时候，就需要考虑在那里安装的问题
+
+之前我的系统的硬盘划分是这样的
+
+|      | 硬盘分区       | 内容                                 |
+| ---- | -------------- | ------------------------------------ |
+| 1    | /dev/nvme0n1p1 | Windows Boot Manager                 |
+| 2    | /dev/nvme0n1p2 | 这一块是window系统预留的区域，比较小 |
+| 3    | /dev/nvme0n1p3 | 这一块是Windows文件系统的区域        |
+| 4    | /dev/nvme0n1p4 | 这一块是ubuntu20.04的系统的区域      |
+
+![_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8414554967511900702&skey=@crypt_7118dab0_7ee78741ab70fd2a65acc7d332dbc230&mmweb_appid=wx_webfilehelper](/home/yang/typora/image/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8414554967511900702&skey=@crypt_7118dab0_7ee78741ab70fd2a65acc7d332dbc230&mmweb_appid=wx_webfilehelper.jpeg)
+
+这个是我配置好的一个界面
+
+我是把之前的/dev/nvme0n1p4先按change那里的“-”移除，然后它就变成了“freespace”，之后把光标移动到freespace的地方，然后点击下面的+号，就可以重新划分硬盘的区域了。
+
+我计划了三块区域。第一块是启动区域，他必须在nvme0n1p1，因为他在第一个块，不过你不要担心如果你这样会损害之前的Windows启动项，因为我这样做是成功的。第二块是交换内存，这块也可以不设置，不过我在这里设置了，它可以作为系统内存的扩展区域，在一定程度上可以提高性能。第三块是Linux文件系统的区域，它挂载系统的根目录。
+
+### 其他的部分和安装其他系统的过程差不多，就不啰嗦了
+
+### 下面是安装后的界面，大家可以参考一下
+
+![image-20240501165637475](/home/yang/typora/image/image-20240501165637475.png)
 
 ## 亮度条件
 
@@ -1077,6 +1129,29 @@ application/rtf=emacs.desktop
 <a name="ideas"> </a>
 
 # ideas
+
+## Windows VS linux
+
+[为什么 Linux 软件安装包会有依赖关系，而 Windows 软件安装包不需要？](https://www.zhihu.com/question/56086360/answer/3342850664?utm_psn=1768356590850064384)
+
+windows中安装的软件会把所有的内容都放到安装包里面，但是linux不是这样，在linux安装的时候会给你指明需要哪些依赖。其实有很多文件是共用的文件，在windows里面会让你重复下载安装，但是linux中就不会这样。
+
+大家解决“依赖”的方式是差不多的：
+
+1. 造一个超大的可执行文件，[静态链接](https://www.zhihu.com/search?q=静态链接&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"answer"%2C"sourceId"%3A3342850664})一切，把所有需要的东西都包进去 ------ 非常低效，而且占用资源；
+2. 把[依赖项](https://www.zhihu.com/search?q=依赖项&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"answer"%2C"sourceId"%3A3342850664})（windows 的 DLL，Linux 的 .so， MAC 的 dylib）部署为程序的一部分，比如扔到应用程序文件夹里，然后根据需要加载或卸载 ------ 稍好一些；
+3. 共享的 ------ 理论上是最优化的。
+
+作者：艾康麦icon-meh
+链接：https://www.zhihu.com/question/56086360/answer/3342850664
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+## 邮件还是微信
+
+[他认为除了少数紧急情况外，没有必要特别使用微信](https://www.zhihu.com/question/327715169/answer/3475424040?utm_psn=1768358898359406592)
+
+我觉得微信不仅是一个聊天工具，现在也成为了一个集成性的功能平台，一个手机甚至只安装一个微信，就可以完成绝大多数的任务，而且随着微信小程序的数量不断增加，微信的功能也会越来越丰富，我觉得将来有一天，我们称之为--微信操作系统都不为过。
 
 ## 网站验证
 
