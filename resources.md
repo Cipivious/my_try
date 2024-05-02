@@ -667,15 +667,25 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 
 ## 油猴脚本
 
-### [无缝翻页](https://greasyfork.org/zh-CN/scripts/419215-%E8%87%AA%E5%8A%A8%E6%97%A0%E7%BC%9D%E7%BF%BB%E9%A1%B5)
+### 常用油猴脚本
 
-### [知乎增强](https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA)
+#### [无缝翻页](https://greasyfork.org/zh-CN/scripts/419215-%E8%87%AA%E5%8A%A8%E6%97%A0%E7%BC%9D%E7%BF%BB%E9%A1%B5)
 
-### [CSDN 增强](https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0)
+#### [知乎增强](https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA)
 
-<a name="linux"> </a>
+#### [CSDN 增强](https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0)
+
+### 创作油猴脚本
+
+[这是油猴脚本的中文论坛](https://bbs.tampermonkey.net.cn/)
+
+
 
 # linux 
+
+## 输入法
+
+感觉ubuntu24.04里面输入法是一个很麻烦的事情，我还按照sogou官方给的教程安装输入法，但是出现了闪屏的问题，[我找到了一个之前的问题，但这个是23.10版本的，我尝试之后并没有解决问题](https://blog.csdn.net/hsyxxyg/article/details/137676045)，[然后从这里面找到了一个说法，说是搜狗输入法需要fcitx5,然后我就把之前的fcitx卸载了，重新安装了fcitx5,在语言支持那里作了切换，但这个时候又出现了新的问题，就是我再dpkg -i sogou.deb的时候，它说需要fcitx，于是我又下回了之前的那个，反复几次都没有妥善的解决。](https://forum.ubuntu.com.cn/viewtopic.php?t=494350)目前官方还没有给从妥善的解决方法，我觉得最好的办法还是用ubuntu默认的ibus输入法，这个输入法一般不会有什么问题，[这是一个在命令行安装中文输入法的教程](https://juejin.cn/post/7274626136328552500)，当然也可以直接从右上角的ibus设置那里安装。如果新安装ibus的话（比如我之前把ibus卸载了然后安装的fcitx），可能右上角不会出现ibus的配置图标，重启一下电脑就出现了。
 
 ## ubuntu24.04双系统重装教程
 
@@ -720,6 +730,16 @@ html_content = markdown.markdown(markdown_content, extensions=extensions)
 
 ## ubuntu包管理器
 
+在 Ubuntu 中，软件包管理器会根据一定的优先级顺序来确定要从哪个软件源下载软件包。这个顺序通常如下所示（从高到低）：
+
+1. **本地源（Local Sources）：** 本地源的软件包会优先于远程软件源进行安装。这包括已经从 CD/DVD 或 USB 驱动器加载的软件包以及通过本地网络共享提供的软件包。
+2. **PPA（Personal Package Archives）：** 如果你已经添加了个人软件包存档（PPA），系统会优先考虑从这些源中下载软件包。
+3. **主要软件源（Main Repositories）：** 官方 Ubuntu 软件源的主要部分，例如 `http://archive.ubuntu.com/ubuntu/`。
+4. **更新软件源（Updates Repositories）：** 包含更新的软件包，通常位于 `http://archive.ubuntu.com/ubuntu/` 的 `-updates` 子目录。
+5. **安全软件源（Security Repositories）：** 包含针对安全漏洞的修复程序的软件包，通常位于 `http://security.ubuntu.com/ubuntu/`。
+6. **后备软件源（Backports Repositories）：** 包含从后续版本的 Ubuntu 中提取的软件包，通常位于 `http://archive.ubuntu.com/ubuntu/` 的 `-backports` 子目录。
+7. **宇宙和多元宇宙软件源（Universe and Multiverse Repositories）：** 包含社区维护的软件包和非自由软件包的软件源。
+
 ### snap商店
 
 ### dpkg （debain package manager）
@@ -730,7 +750,33 @@ dpkg --remove
 
 dpkg --purge
 
-### apt
+### apt（调用dpkg来完成）
+
+添加源的方法
+
+要向 `dpkg` 中添加软件包源，你需要编辑 `/etc/apt/sources.list` 文件或在 `/etc/apt/sources.list.d/` 目录中创建一个新的 `.list` 文件。以下是向 `dpkg` 添加源的一般步骤：
+
+**编辑 `sources.list` 文件：**
+
+打开终端并使用你喜欢的文本编辑器（如 `nano`、`vim` 或 `gedit`）编辑 `/etc/apt/sources.list` 文件。在文件中添加新源的行，格式如下：
+
+Types: deb
+URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu/
+Suites: noble
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+其中，`http://repository.example.com/ubuntu` 是软件包存储库的 URL，`distribution` 是发行版的代号（如 `bionic`、`focal`），`component1`, `component2` 等是软件包的组件（如 `main`, `contrib`, `non-free`）。
+
+**添加 PPA：**
+
+使用 `add-apt-repository` 命令添加 PPA。例如：
+
+```
+sudo add-apt-repository ppa:example/ppa
+```
+
+这里的 `ppa:example/ppa` 是 PPA 的名称。在命令中使用实际的 PPA 名称。
 
 ## 创建应用图标
 

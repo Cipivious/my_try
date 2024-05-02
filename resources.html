@@ -704,6 +704,7 @@ emacs to write js</a></li>
 </ul></li>
 <li><a href="#linux" id="toc-linux">linux</a>
 <ul>
+<li><a href="#输入法" id="toc-输入法">输入法</a></li>
 <li><a href="#ubuntu24.04双系统重装教程" id="toc-ubuntu24.04双系统重装教程">ubuntu24.04双系统重装教程</a></li>
 <li><a href="#亮度条件" id="toc-亮度条件">亮度条件</a></li>
 <li><a href="#ubuntu包管理器" id="toc-ubuntu包管理器">ubuntu包管理器</a></li>
@@ -1394,12 +1395,18 @@ scrapy
 <h3 id="vimium-模拟vim控制浏览器">vimium-模拟vim控制浏览器</h3>
 <h3 id="timeyourweb"><a href="https://chromewebstore.google.com/detail/timeyourweb-time-tracker/kfmlkgchpffnaphmlmjnimonlldbcpnh?hl=zh-CN&amp;utm_source=ext_sidebar"><strong>TimeYourWeb</strong></a></h3>
 <h2 id="油猴脚本">油猴脚本</h2>
-<h3 id="无缝翻页"><a href="https://greasyfork.org/zh-CN/scripts/419215-%E8%87%AA%E5%8A%A8%E6%97%A0%E7%BC%9D%E7%BF%BB%E9%A1%B5">无缝翻页</a></h3>
-<h3 id="知乎增强"><a href="https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA">知乎增强</a></h3>
-<h3 id="csdn-增强"><a href="https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">CSDN
-增强</a></h3>
-<p><a name="linux"> </a></p>
+<h3 id="常用油猴脚本">常用油猴脚本</h3>
+<h4 id="无缝翻页"><a href="https://greasyfork.org/zh-CN/scripts/419215-%E8%87%AA%E5%8A%A8%E6%97%A0%E7%BC%9D%E7%BF%BB%E9%A1%B5">无缝翻页</a></h4>
+<h4 id="知乎增强"><a href="https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA">知乎增强</a></h4>
+<h4 id="csdn-增强"><a href="https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">CSDN
+增强</a></h4>
+<h3 id="创作油猴脚本">创作油猴脚本</h3>
+<p><a href="https://bbs.tampermonkey.net.cn/">这是油猴脚本的中文论坛</a></p>
 <h1 id="linux">linux</h1>
+<h2 id="输入法">输入法</h2>
+<p>感觉ubuntu24.04里面输入法是一个很麻烦的事情，我还按照sogou官方给的教程安装输入法，但是出现了闪屏的问题，<a href="https://blog.csdn.net/hsyxxyg/article/details/137676045">我找到了一个之前的问题，但这个是23.10版本的，我尝试之后并没有解决问题</a>，<a href="https://forum.ubuntu.com.cn/viewtopic.php?t=494350">然后从这里面找到了一个说法，说是搜狗输入法需要fcitx5,然后我就把之前的fcitx卸载了，重新安装了fcitx5,在语言支持那里作了切换，但这个时候又出现了新的问题，就是我再dpkg
+-i
+sogou.deb的时候，它说需要fcitx，于是我又下回了之前的那个，反复几次都没有妥善的解决。</a>目前官方还没有给从妥善的解决方法，我觉得最好的办法还是用ubuntu默认的ibus输入法，这个输入法一般不会有什么问题，<a href="https://juejin.cn/post/7274626136328552500">这是一个在命令行安装中文输入法的教程</a>，当然也可以直接从右上角的ibus设置那里安装。如果新安装ibus的话（比如我之前把ibus卸载了然后安装的fcitx），可能右上角不会出现ibus的配置图标，重启一下电脑就出现了。</p>
 <h2 id="ubuntu24.04双系统重装教程">ubuntu24.04双系统重装教程</h2>
 <p><a href="https://zhuanlan.zhihu.com/p/405352705?utm_id=0">附一个archlinux启动盘制作的安装教程</a></p>
 <p><a href="https://juejin.cn/post/7224418285797965884">这是一个安装archlinux的教程</a></p>
@@ -1455,13 +1462,63 @@ scrapy
 <h2 id="亮度条件">亮度条件</h2>
 <p><a href="https://blog.csdn.net/ftimes/article/details/119907899">亮度调节</a></p>
 <h2 id="ubuntu包管理器">ubuntu包管理器</h2>
+<p>在 Ubuntu
+中，软件包管理器会根据一定的优先级顺序来确定要从哪个软件源下载软件包。这个顺序通常如下所示（从高到低）：</p>
+<ol type="1">
+<li><strong>本地源（Local Sources）：</strong>
+本地源的软件包会优先于远程软件源进行安装。这包括已经从 CD/DVD 或 USB
+驱动器加载的软件包以及通过本地网络共享提供的软件包。</li>
+<li><strong>PPA（Personal Package Archives）：</strong>
+如果你已经添加了个人软件包存档（PPA），系统会优先考虑从这些源中下载软件包。</li>
+<li><strong>主要软件源（Main Repositories）：</strong> 官方 Ubuntu
+软件源的主要部分，例如
+<code>http://archive.ubuntu.com/ubuntu/</code>。</li>
+<li><strong>更新软件源（Updates Repositories）：</strong>
+包含更新的软件包，通常位于
+<code>http://archive.ubuntu.com/ubuntu/</code> 的 <code>-updates</code>
+子目录。</li>
+<li><strong>安全软件源（Security Repositories）：</strong>
+包含针对安全漏洞的修复程序的软件包，通常位于
+<code>http://security.ubuntu.com/ubuntu/</code>。</li>
+<li><strong>后备软件源（Backports Repositories）：</strong>
+包含从后续版本的 Ubuntu 中提取的软件包，通常位于
+<code>http://archive.ubuntu.com/ubuntu/</code> 的
+<code>-backports</code> 子目录。</li>
+<li><strong>宇宙和多元宇宙软件源（Universe and Multiverse
+Repositories）：</strong>
+包含社区维护的软件包和非自由软件包的软件源。</li>
+</ol>
 <h3 id="snap商店">snap商店</h3>
 <h3 id="dpkg-debain-package-manager">dpkg （debain package
 manager）</h3>
 <p>dpkg –list</p>
 <p>dpkg –remove</p>
 <p>dpkg –purge</p>
-<h3 id="apt">apt</h3>
+<h3 id="apt调用dpkg来完成">apt（调用dpkg来完成）</h3>
+<p>添加源的方法</p>
+<p>要向 <code>dpkg</code> 中添加软件包源，你需要编辑
+<code>/etc/apt/sources.list</code> 文件或在
+<code>/etc/apt/sources.list.d/</code> 目录中创建一个新的
+<code>.list</code> 文件。以下是向 <code>dpkg</code>
+添加源的一般步骤：</p>
+<p><strong>编辑 <code>sources.list</code> 文件：</strong></p>
+<p>打开终端并使用你喜欢的文本编辑器（如
+<code>nano</code>、<code>vim</code> 或 <code>gedit</code>）编辑
+<code>/etc/apt/sources.list</code>
+文件。在文件中添加新源的行，格式如下：</p>
+<p>Types: deb URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ Suites:
+noble Components: main restricted universe multiverse Signed-By:
+/usr/share/keyrings/ubuntu-archive-keyring.gpg</p>
+<p>其中，<code>http://repository.example.com/ubuntu</code>
+是软件包存储库的 URL，<code>distribution</code> 是发行版的代号（如
+<code>bionic</code>、<code>focal</code>），<code>component1</code>,
+<code>component2</code> 等是软件包的组件（如 <code>main</code>,
+<code>contrib</code>, <code>non-free</code>）。</p>
+<p><strong>添加 PPA：</strong></p>
+<p>使用 <code>add-apt-repository</code> 命令添加 PPA。例如：</p>
+<pre><code>sudo add-apt-repository ppa:example/ppa</code></pre>
+<p>这里的 <code>ppa:example/ppa</code> 是 PPA 的名称。在命令中使用实际的
+PPA 名称。</p>
 <h2 id="创建应用图标">创建应用图标</h2>
 <h3 id="应用图标路径">应用图标路径</h3>
 <p>~/.local/share</p>
@@ -1796,8 +1853,8 @@ Google 应聘，只写了三个词「I wrote Python」的简历是真的吗？</
 <h2 id="咸鱼">咸鱼</h2>
 <h3 id="咸鱼网站"><a href="https://www.goofish.com/">咸鱼网站</a></h3>
 <p>咸鱼是阿里巴巴出品的一个二手买卖平台，里面有很多二手和闲置的东西，有的价格很低，但是也并非全都如此。当咸鱼变得逐渐普及之后，有一些咸鱼开店的程序也应运而生，比如</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>点击链接直接打开</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>【闲鱼】https:<span class="op">//</span>m.tb.cn<span class="op">/</span>h.g0mERg8?tk<span class="op">=</span>nnQ5WIgrI8s CZ3458 「快来捡漏【【自动发货】闲鱼虚拟自动发货教程，闲鱼官方网站的一种方法，很】」</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>点击链接直接打开</span></code></pre></div>
 <p>以上是一个例子。</p>
 <p><a name="typora"> </a></p>
 <h1 id="typora">typora</h1>
