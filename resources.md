@@ -1641,9 +1641,242 @@ app.mount('#app');
 </html>
 ```
 
+### 创建vue应用的两种方法
 
+```html
+//其实vue应用的创建方法只有一种，就是Vue.createApp(const aconst)
+//在创建好以后就挂载到对应的id上面
+<script>
+      const AttributeBinding = {
+        data() {
+          return {
+            message: 'You loaded this page on ' + new Date().toLocaleString()
+          }
+        }
+      }
+      Vue.createApp(AttributeBinding).mount('#bind-attribute')
 
+      const Counter = Vue.createApp({
+        data() {
+          return {
+            counter: 0
+          }
+        },
+        methods: {
+          add() {
+            this.counter++;
+          }
+        }
+      });
 
+      Counter.mount('#counter');
+    </script>
+```
+
+### js定义常量对象
+
+```js
+const myObject = {
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    add() {
+      this.counter++;
+    }
+  }
+};
+在这个示例中：
+myObject 是一个常量引用，它指向一个对象，该对象包含两个部分：data 方法和 methods 对象。
+data 是一个方法，它返回一个对象，这个对象包含一个键值对 counter: 0。
+methods 对象中包含一个方法 add，该方法将 counter 的值加 1。
+尽管 myObject 本身是常量，但可以修改它所引用对象的属性和方法。
+```
+
+### vue中常见的指令和特性绑定
+
+在 Vue.js 中，有许多指令和特性绑定，用于在模板中实现各种功能。以下是一些常见的 Vue 指令及其用法总结：
+
+#### v-bind
+
+`v-bind` 是用于绑定 HTML 属性、class 和 style 的指令。
+
+**语法**:
+```html
+<!-- 动态属性绑定 -->
+<a v-bind:href="url">Link</a>
+<!-- 缩写形式 -->
+<a :href="url">Link</a>
+```
+
+**绑定 class 和 style**:
+```html
+<!-- 绑定 class -->
+<div :class="{ active: isActive }"></div>
+
+<!-- 绑定 style -->
+<div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+```
+
+#### v-on
+
+`v-on` 用于监听 DOM 事件。
+
+**语法**:
+```html
+<!-- 监听事件 -->
+<button v-on:click="doSomething">Click me</button>
+<!-- 缩写形式 -->
+<button @click="doSomething">Click me</button>
+```
+
+#### v-model
+
+`v-model` 用于双向数据绑定，常用于表单元素。
+
+**语法**:
+```html
+<!-- 双向绑定 input 框的值 -->
+<input v-model="message" placeholder="edit me">
+
+<!-- 用于复选框 -->
+<input type="checkbox" v-model="checked">
+
+<!-- 用于单选按钮 -->
+<input type="radio" v-model="picked" value="a">
+<input type="radio" v-model="picked" value="b">
+
+<!-- 用于选择框 -->
+<select v-model="selected">
+  <option disabled value="">Please select one</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+```
+
+#### v-for
+
+`v-for` 用于循环渲染元素列表。
+
+**语法**:
+```html
+<!-- 遍历数组 -->
+<li v-for="item in items" :key="item.id">{{ item.text }}</li>
+
+<!-- 遍历对象 -->
+<div v-for="(value, key) in object" :key="key">
+  {{ key }}: {{ value }}
+</div>
+
+<!-- 遍历带有索引的数组 -->
+<li v-for="(item, index) in items" :key="index">{{ item.text }}</li>
+```
+
+#### v-if, v-else-if, v-else
+
+用于条件渲染。
+
+**语法**:
+```html
+<!-- 条件渲染 -->
+<div v-if="awesome">Vue is awesome!</div>
+<div v-else>Oh no 😢</div>
+
+<!-- 结合 v-else-if 和 v-else 使用 -->
+<div v-if="type === 'A'">A</div>
+<div v-else-if="type === 'B'">B</div>
+<div v-else-if="type === 'C'">C</div>
+<div v-else>Not A/B/C</div>
+```
+
+#### v-show
+
+用于切换元素的显示和隐藏。
+
+**语法**:
+```html
+<div v-show="isVisible">This is visible</div>
+```
+
+#### 4v-text
+
+更新元素的 `textContent`。
+
+**语法**:
+```html
+<span v-text="message"></span>
+```
+
+#### v-html
+
+更新元素的 `innerHTML`，允许渲染 HTML 内容。
+
+**语法**:
+```html
+<div v-html="htmlContent"></div>
+```
+
+#### v-cloak
+
+用于防止闪烁效果，在 Vue 完全编译之后，`v-cloak` 属性将被移除。
+
+**语法**:
+```html
+<div v-cloak>{{ message }}</div>
+```
+
+#### v-pre
+
+跳过这个元素和它的子元素的编译过程。用于显示原始的 Mustache 标签。
+
+**语法**:
+```html
+<span v-pre>{{ this will not be compiled }}</span>
+```
+
+#### v-once
+
+只渲染元素和组件一次。以后数据变化时不会重新渲染。
+
+**语法**:
+```html
+<span v-once>{{ message }}</span>
+```
+
+#### 自定义指令
+
+除了内置指令，你还可以创建自定义指令。
+
+**创建自定义指令**:
+```javascript
+Vue.directive('focus', {
+  inserted: function (el) {
+    el.focus()
+  }
+})
+```
+
+**使用自定义指令**:
+```html
+<input v-focus>
+```
+
+这些是 Vue.js 中最常用的一些指令和特性绑定。了解这些指令将帮助你在 Vue.js 开发中更高效地处理模板和数据。
+
+### 特性缩写
+
+v-前缀作为一种视觉提示,用来识别模板中 Vue 特定的 attribute。当你在使用 Vue.js 为现有标签添加动态行为 (dynamic behavior) 时,v- 前缀很有帮助,然而,对于一些频繁用到的指令来说,就会感到使用繁琐。同时,在构建由 Vue 管理所有模板的单页面应用程序 (SPA -single-page application) (opens new window) 时, v- 前缀也变得没那么重要了。因此,Vue 为 v-bind 和 v-on 这两个最常用的指令,提供了特定简写
+```
+v-vind:herf='urf' <==> :herf='urf'
+v-on:click='change' <==> @click='change'
+```
+
+### 键名大小写
+
+在 DOM 中使用模板时 (直接在一个 HTML 文件里撰写模板),还需要避免使用大写字符来命名键名,因为浏览器会把 attribute 名全部强制转为小写
 
 
 
