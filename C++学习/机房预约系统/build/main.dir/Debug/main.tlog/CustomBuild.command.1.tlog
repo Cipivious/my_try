@@ -1,0 +1,10 @@
+^C:\USERS\ADMINISTRATOR\TYPORA\MY_TRY\C++学习\机房预约系统\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Administrator/typora/my_try/C++学习/机房预约系统 -BC:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build --check-stamp-file C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

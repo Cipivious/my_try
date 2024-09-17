@@ -1,0 +1,5 @@
+2024-08-26 09:50:21,177 DEBUG    this is a debug log
+2024-08-26 09:50:21,177 INFO     this is an info log
+2024-08-26 09:50:21,177 WARNING  this ia a warning log
+2024-08-26 09:50:21,178 ERROR    this is an error log
+2024-08-26 09:50:21,178 CRITICAL this is a critical log

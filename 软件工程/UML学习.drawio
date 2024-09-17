@@ -1,0 +1,107 @@
+<mxfile host="65bd71144e">
+    <diagram id="mpY4MLLlgeedfshHXZ-U" name="第 1 页">
+        <mxGraphModel dx="877" dy="392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="20" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="3">
+                    <mxGeometry x="5" y="50" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" edge="1" parent="3">
+                    <mxGeometry x="-1" relative="1" as="geometry">
+                        <mxPoint y="50" as="sourcePoint"/>
+                        <mxPoint x="220" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="10">
+                    <mxGeometry x="-1" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontFamily=Helvetica;fontSize=18;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="3">
+                    <mxGeometry x="5" y="300" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="骰子游戏" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="40" width="100" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="5">
+                    <mxGeometry x="45" y="50" width="10" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="计算总的点数" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" edge="1" target="7" parent="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="55" y="240" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="95" y="240"/>
+                            <mxPoint x="95" y="260"/>
+                        </Array>
+                        <mxPoint x="60" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="骰子" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="40" width="100" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=18;" vertex="1" parent="6">
+                    <mxGeometry x="45" y="80" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=18;" vertex="1" parent="6">
+                    <mxGeometry x="45" y="160" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=open;endFill=1;endSize=12;html=1;fontSize=18;" edge="1" parent="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="-135" y="160" as="sourcePoint"/>
+                        <mxPoint x="45" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-50" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="启动游戏" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="60" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;fontSize=18;" edge="1" parent="1" source="7" target="16">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="270" y="120" as="sourcePoint"/>
+                        <mxPoint x="390" y="120" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="120"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="投第一次骰子" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="90" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=open;endFill=1;endSize=12;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;exitX=0.07;exitY=0.969;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="16" target="7">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="230" y="180" as="sourcePoint"/>
+                        <mxPoint x="120" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="返回点数" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="140" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="投第二次骰子" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="170" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=open;endFill=1;endSize=12;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;exitX=-0.045;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.139;entryY=0.597;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="25" target="7">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="455.70000000000005" y="240" as="sourcePoint"/>
+                        <mxPoint x="320" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="返回点数" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="220" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=open;endFill=1;endSize=12;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;exitX=-0.045;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.105;entryY=-0.034;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="31">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="255.00000000000017" y="339.82000000000005" as="sourcePoint"/>
+                        <mxPoint x="76.83999999999997" y="339.31000000000006" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="返回游戏结果" style="text;strokeColor=none;fillColor=none;html=1;fontSize=18;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="320" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

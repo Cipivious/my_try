@@ -1,0 +1,5 @@
+C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/main.dir
+C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/test_csv.dir
+C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/new_module.dir
+C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CMakeFiles/ZERO_CHECK.dir

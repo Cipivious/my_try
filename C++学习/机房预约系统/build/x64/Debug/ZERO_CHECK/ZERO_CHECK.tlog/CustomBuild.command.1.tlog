@@ -1,0 +1,10 @@
+^C:\USERS\ADMINISTRATOR\TYPORA\MY_TRY\C++学习\机房预约系统\BUILD\CMAKEFILES\307B3D4328FF3A07297DF896872EB5F1\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Administrator/typora/my_try/C++学习/机房预约系统 -BC:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Administrator/typora/my_try/C++学习/机房预约系统/build/CSVHandlerProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,6 @@
+{
+  "argparser": {
+    "first_arg": "hello",
+    "secend_arg": "world"
+  }
+}

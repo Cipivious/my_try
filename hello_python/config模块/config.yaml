@@ -1,0 +1,12 @@
+# : 表示键值对
+# - 表示列表
+# 其他的地方的单个元素是纯值
+key:
+  value1: 1
+  value2: 3
+  value3: 5
+
+key2:
+  - value1
+  - value2
+  - value3
