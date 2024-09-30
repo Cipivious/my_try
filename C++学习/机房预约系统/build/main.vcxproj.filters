@@ -7,6 +7,15 @@
     <ClCompile Include="C:\Users\Administrator\typora\my_try\C++学习\机房预约系统\lib\CSVHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\typora\my_try\C++学习\机房预约系统\lib\administrator_page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\typora\my_try\C++学习\机房预约系统\lib\main_page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\typora\my_try\C++学习\机房预约系统\lib\student_page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Administrator\typora\my_try\C++学习\机房预约系统\CMakeLists.txt" />

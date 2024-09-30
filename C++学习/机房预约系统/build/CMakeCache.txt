@@ -209,6 +209,9 @@ CSVHandlerProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CSVHandlerProject_SOURCE_DIR:STATIC=C:/Users/Administrator/typora/my_try/C++学习/机房预约系统
 
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=C:/vcpkg/installed/x64-windows/share/gtest
+
 
 ########################
 # INTERNAL cache entries

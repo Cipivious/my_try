@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page with Tachyons</title>
+
+    <!-- 引入 Tachyons CSS 库 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <style>
+      /* 你可以在这里添加自定义样式 */
+      p {
+        font-size: large;
+      }
+
+      body {
+        display: grid;
+        background-color: rgb(77, 154, 87);
+        /* align-items: center; */
+        justify-content: center; /* 水平居中 */
+      }
+
+      span.pre {
+        color: bisque;
+      }
+
+      ul {
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>内容汇总</h1>
+    <p>一般来说，函数的返回值都是RandomSymbol的类型</p>
+    <p>
+      搜索到具体的名字以后，可以到对应的地方可以找到对应随机变量概率密度函数的定义
+    </p>
+    <p>
+      这里面定义了绝大多数的类型的常用随机变量的概型，有有限离散型，无限离散型，连续型，还有联合分布的概型
+    </p>
+    <p>它还包含常见的统计过程，比如马尔可夫过程，伯努利过程，指数过程等等</p>
+    <p>
+      它还包含一些其他的我不太了解的过程，不过感觉它在概率和统计方面已经做的相当完备了
+    </p>
+    <p>
+      除了它内置的一些方法以外，它还支持自定义随机变量的概型，这也给我们添加了很多的灵活性，对于简单的随机变量，我们可以直接自己定义，而不需要去查表，而对于一些表里没有的，我们也可以自己解决，非常的灵活。
+    </p>
+    <ul>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#finite-types"
+          >Finite Types</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteUniform"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">DiscreteUniform()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Die"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Die()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Bernoulli"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Bernoulli()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Coin"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Coin()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Binomial"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Binomial()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BetaBinomial"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">BetaBinomial()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Hypergeometric"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Hypergeometric()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.FiniteRV"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">FiniteRV()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Rademacher"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Rademacher()</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#discrete-types"
+          >Discrete Types</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Geometric"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Geometric()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Hermite"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Hermite()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Poisson"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Poisson()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Logarithmic"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Logarithmic()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.NegativeBinomial"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">NegativeBinomial()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Skellam"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Skellam()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.YuleSimon"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">YuleSimon()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Zeta"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Zeta()</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#continuous-types"
+          >Continuous Types</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Arcsin"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Arcsin()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Benini"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Benini()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Beta"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Beta()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BetaNoncentral"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">BetaNoncentral()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BetaPrime"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">BetaPrime()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BoundedPareto"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">BoundedPareto()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Cauchy"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Cauchy()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Chi"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Chi()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ChiNoncentral"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ChiNoncentral()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ChiSquared"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ChiSquared()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Dagum"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Dagum()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Davis"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Davis()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Erlang"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Erlang()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ExGaussian"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ExGaussian()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Exponential"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Exponential()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.FDistribution"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">FDistribution()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.FisherZ"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">FisherZ()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Frechet"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Frechet()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Gamma"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Gamma()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.GammaInverse"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">GammaInverse()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Gompertz"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Gompertz()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Gumbel"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Gumbel()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Kumaraswamy"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Kumaraswamy()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Laplace"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Laplace()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Levy"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Levy()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Logistic"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Logistic()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.LogLogistic"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">LogLogistic()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.LogNormal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">LogNormal()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Lomax"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Lomax()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Maxwell"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Maxwell()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Moyal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Moyal()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Nakagami"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Nakagami()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Normal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Normal()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Pareto"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Pareto()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.PowerFunction"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">PowerFunction()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.QuadraticU"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">QuadraticU()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.RaisedCosine"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">RaisedCosine()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Rayleigh"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Rayleigh()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Reciprocal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Reciprocal()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.StudentT"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">StudentT()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ShiftedGompertz"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ShiftedGompertz()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Trapezoidal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Trapezoidal()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Triangular"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Triangular()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Uniform"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Uniform()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.UniformSum"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">UniformSum()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.VonMises"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">VonMises()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Wald"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Wald()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Weibull"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Weibull()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.WignerSemicircle"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">WignerSemicircle()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ContinuousRV"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ContinuousRV()</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#joint-types"
+          >Joint Types</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.JointRV"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">JointRV()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.marginal_distribution"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">marginal_distribution()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MultivariateNormal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MultivariateNormal()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MultivariateLaplace"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MultivariateLaplace()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.GeneralizedMultivariateLogGamma"
+              ><code class="docutils literal notranslate"
+                ><span class="pre"
+                  >GeneralizedMultivariateLogGamma()</span
+                ></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.GeneralizedMultivariateLogGammaOmega"
+              ><code class="docutils literal notranslate"
+                ><span class="pre"
+                  >GeneralizedMultivariateLogGammaOmega()</span
+                ></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Multinomial"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Multinomial()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MultivariateBeta"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MultivariateBeta()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MultivariateEwens"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MultivariateEwens()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MultivariateT"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MultivariateT()</span></code
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.NegativeMultinomial"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">NegativeMultinomial()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.NormalGamma"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">NormalGamma()</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#stochastic-processes"
+          >Stochastic Processes</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">DiscreteMarkovChain</span></code
+              ></a
+            >
+            <ul>
+              <li class="">
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.absorbing_probabilities"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.absorbing_probabilities()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li class="">
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.canonical_form"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.canonical_form()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.communication_classes"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.communication_classes()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.decompose"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.decompose()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.fixed_row_vector"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.fixed_row_vector()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.fundamental_matrix"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.fundamental_matrix()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.limiting_distribution"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.limiting_distribution</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.sample"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre">DiscreteMarkovChain.sample()</span></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.stationary_distribution"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.stationary_distribution()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.DiscreteMarkovChain.transition_probabilities"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >DiscreteMarkovChain.transition_probabilities</span
+                    ></code
+                  ></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.ContinuousMarkovChain"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">ContinuousMarkovChain</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BernoulliProcess"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">BernoulliProcess</span></code
+              ></a
+            >
+            <ul>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BernoulliProcess.expectation"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >BernoulliProcess.expectation()</span
+                    ></code
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  class="reference internal"
+                  href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.BernoulliProcess.probability"
+                  ><code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >BernoulliProcess.probability()</span
+                    ></code
+                  ></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.PoissonProcess"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">PoissonProcess</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.WienerProcess"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">WienerProcess</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.GammaProcess"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">GammaProcess</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#matrix-distributions"
+          >Matrix Distributions</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MatrixGamma"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MatrixGamma()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.Wishart"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">Wishart()</span></code
+              ></a
+            >
+          </li>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.MatrixNormal"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">MatrixNormal()</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <a
+          class="reference internal"
+          href="https://docs.sympy.org/latest/modules/stats.html#compound-distribution"
+          >Compound Distribution</a
+        >
+        <ul>
+          <li class="">
+            <a
+              class="reference internal"
+              href="https://docs.sympy.org/latest/modules/stats.html#sympy.stats.compound_rv.CompoundDistribution"
+              ><code class="docutils literal notranslate"
+                ><span class="pre">CompoundDistribution</span></code
+              ></a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

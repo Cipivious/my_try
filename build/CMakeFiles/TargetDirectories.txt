@@ -1,5 +1,0 @@
-C:/Users/Administrator/typora/my_try/build/CMakeFiles/main.dir
-C:/Users/Administrator/typora/my_try/build/CMakeFiles/test_csv.dir
-C:/Users/Administrator/typora/my_try/build/CMakeFiles/new_module.dir
-C:/Users/Administrator/typora/my_try/build/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/typora/my_try/build/CMakeFiles/rebuild_cache.dir
